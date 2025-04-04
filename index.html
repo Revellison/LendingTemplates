@@ -1,15 +1,88 @@
 <!DOCTYPE html>
- <html lang="en">
- <head>
+<html lang="ru">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirect</title>
- </head>
- <body>
-<nav>
-    <a href="templates/ecobox/index.html">EcoBox</a>
-    <a href="templates/ecobox/index.html">1</a>
-    <a href="">1</a>
-</nav>
- </body>
- </html>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            width: 90%;
+        }
+        
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .project-link {
+            display: block;
+            padding: 15px 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .project-link:hover {
+            background-color: #e9ecef;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-color: #c3cfe2;
+        }
+        
+        .ecobox {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .fitquest {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Templates</h1>
+        <nav>
+            <a href="templates/ecobox/index.html" class="project-link ecobox">EcoBox - Экологичная подписка</a>
+            <a href="templates/FitQuest/index.html" class="project-link fitquest">FitQuest - Фитнес приключение</a>
+        </nav>
+        <footer>
+            © 2025 Made by <a href="https://github.com/Revellison">Revellison</a>. Все права защищены.
+        </footer>
+    </div>
+</body>
+</html>

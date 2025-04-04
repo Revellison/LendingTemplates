@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitQuest - Тренируйся. Играй. Становись героем.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/Fiticon.png">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="assets/images/Fiticon.png" alt="FitQuest Logo">
+                <span>FitQuest - demo</span>
+            </div>
+            <div class="nav-links">
+                <a href="#how-it-works">Как это работает</a>
+                <a href="#pricing">Тарифы</a>
+                <a href="#testimonials">Отзывы</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animated-text">Тренируйся. Играй. Становись героем.</h1>
+                <p>Превращай свои тренировки в захватывающие приключения. Выполняй задания, побеждай монстров и прокачивай своего персонажа в реальной жизни!</p>
+                <div class="hero-buttons">
+                    <a href="#download" class="cta-button">Начать приключение</a>
+                    <a href="#video" class="secondary-button">Смотреть видео</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-text">героев</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8</span>
+                        <span class="stat-text">рейтинг</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-text">квестов</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/hero-character.png" alt="FitQuest Character" class="floating">
+                <div class="hero-badge">
+                    <span>RPG + Фитнес</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Видео-секция -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <h2>Посмотри, как это работает</h2>
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <img src="assets/images/preview.webp" alt="Превью видео">
+                    <div class="play-button">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pixel-border"></div>
+    </section>
+
+    <!-- Как это работает -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <img src="assets/images/quest (1).png" alt="Choose Character">
+                    </div>
+                    <h3>Выбери персонажа</h3>
+                    <p>Воин, маг или лучник? Выбери класс и настрой героя под свой стиль тренировок.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <img src="assets/images/quest (2).png" alt="Complete Quests">
+                    </div>
+                    <h3>Выполняй квесты</h3>
+                    <p>Пройди 5000 шагов, чтобы победить дракона, или отжимайся для усиления своего героя.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <img src="assets/images/quest (3).png" alt="Get Rewards">
+                    </div>
+                    <h3>Получай награды</h3>
+                    <p>Прокачивай персонажа, открывай новые локации и собирай редкие предметы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Примеры квестов -->
+    <section class="quests-example">
+        <div class="container">
+            <h2>Примеры квестов</h2>
+            <div class="quests">
+                <div class="quest">
+                    <div class="quest-icon">
+                        <img src="assets/images/abil (1).png" alt="Running Quest">
+                    </div>
+                    <div class="quest-details">
+                        <h3>Бег от орков</h3>
+                        <p>Пробеги 3 км, чтобы сбежать от преследования</p>
+                        <div class="quest-rewards">
+                            <span class="reward">+10 к выносливости</span>
+                            <span class="reward">200 монет</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quest">
+                    <div class="quest-icon">
+                        <img src="assets/images/abil (2).png" alt="Pushup Quest">
+                    </div>
+                    <div class="quest-details">
+                        <h3>Сила титана</h3>
+                        <p>Сделай 50 отжиманий для получения силы титана</p>
+                        <div class="quest-rewards">
+                            <span class="reward">+15 к силе</span>
+                            <span class="reward">Редкий амулет</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="quest">
+                    <div class="quest-icon">
+                        <img src="assets/images/abil (3).png" alt="Yoga Quest">
+                    </div>
+                    <div class="quest-details">
+                        <h3>Мудрость дракона</h3>
+                        <p>15-минутная йога для получения древних знаний</p>
+                        <div class="quest-rewards">
+                            <span class="reward">+12 к ловкости</span>
+                            <span class="reward">Свиток мудрости</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pixel-border reverse"></div>
+    </section>
+
+    <!-- Тарифы -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2>Выбери свой тариф</h2>
+            <div class="plans">
+                <div class="plan">
+                    <div class="plan-header">
+                        <h3>Бесплатный</h3>
+                        <div class="plan-price">
+                            <span>₽0</span>
+                            <span class="per-month">навсегда</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>Базовые квесты</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>1 персонаж на выбор</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>Ежедневные задания</span>
+                        </div>
+                        <div class="plan-feature disabled">
+                            <span class="checkmark">✗</span>
+                            <span>PvP битвы</span>
+                        </div>
+                        <div class="plan-feature disabled">
+                            <span class="checkmark">✗</span>
+                            <span>Премиум снаряжение</span>
+                        </div>
+                    </div>
+                    <a href="#download" class="plan-button">Выбрать</a>
+                </div>
+                <div class="plan premium">
+                    <div class="plan-badge">Популярный</div>
+                    <div class="plan-header">
+                        <h3>Премиум</h3>
+                        <div class="plan-price">
+                            <span class="original-price">₽349</span>
+                            <span>₽299</span>
+                            <span class="per-month">в месяц</span>
+                        </div>
+                    </div>
+                    <div class="plan-features">
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>Все квесты и подземелья</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>5 персонажей на выбор</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>Ежедневные награды х2</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>PvP битвы с друзьями</span>
+                        </div>
+                        <div class="plan-feature">
+                            <span class="checkmark">✓</span>
+                            <span>Эксклюзивное снаряжение</span>
+                        </div>
+                    </div>
+                    <a href="#download" class="plan-button">Выбрать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>Что говорят наши герои</h2>
+            <div class="reviews-container">
+                <div class="app-store">
+                    <div class="store-header">
+                        <img src="assets/images/app_store.png" alt="App Store">
+                        <div class="store-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.8 (1,245 отзывов)</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer">Александр К.</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p>Благодаря FitQuest я стал заниматься спортом каждый день. Теперь тренировки — это моё любимое приключение!</p>
+                    </div>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer">Елена М.</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p>Сбросила 5 кг за 2 месяца, просто выполняя квесты. Это намного веселее, чем обычные тренировки!</p>
+                    </div>
+                </div>
+                <div class="google-play">
+                    <div class="store-header">
+                        <img src="assets/images/google_play.png" alt="Google Play">
+                        <div class="store-rating">
+                            <div class="stars">★★★★★</div>
+                            <span>4.7 (2,082 отзывов)</span>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer">Дмитрий П.</span>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                        <p>Наконец-то мотивация заниматься спортом! Бег от орков намного интереснее обычной пробежки.</p>
+                    </div>
+                    <div class="review">
+                        <div class="review-header">
+                            <span class="reviewer">Ольга С.</span>
+                            <div class="stars">★★★★</div>
+                        </div>
+                        <p>Отличное приложение! С нетерпением жду новых квестов и заданий. Минус звезда только за редкие обновления.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="users-count">
+                <div class="count-icon">👥</div>
+                <div class="count-text">
+                    <span class="count-number">50,000+</span>
+                    <span>героев уже в FitQuest!</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Скачать -->
+    <section id="download" class="download">
+        <div class="container">
+            <h2>Готов стать героем?</h2>
+            <p>Скачай FitQuest прямо сейчас и начни своё приключение!</p>
+            <div class="download-buttons">
+                <a href="#" class="store-button">
+                    <img src="assets/appstore-download.png" alt="Download on App Store">
+                </a>
+                <a href="#" class="store-button">
+                    <img src="assets/googleplay-download.png" alt="Get it on Google Play">
+                </a>
+            </div>
+            <div class="coming-soon">
+                <span>Оставь свой email, чтобы получить уведомление о регистрации:</span>
+                <div class="notify-form">
+                    <input type="email" placeholder="Ваш email">
+                    <button type="submit">Уведомить</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="assets/images/Fiticon.png" alt="FitQuest">
+                        <span>FitQuest</span>
+                    </div>
+                    <p>Превращаем фитнес в игру, а упражнения в приключения</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Ссылки</h4>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#how-it-works">Как это работает</a></li>
+                        <li><a href="#pricing">Тарифы</a></li>
+                        <li><a href="#testimonials">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Юридическая информация</h4>
+                    <ul>
+                        <li><a href="#">Условия использования</a></li>
+                        <li><a href="#">Политика конфиденциальности</a></li>
+                        <li><a href="#">Правила сообщества</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Контакты</h4>
+                    <ul>
+                        <li>support@fitquest.com</li>
+                        <li>+7 (800) 123-45-67</li>
+                        <li>г. Москва, ул. Примерная, 123</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p> © 2025 Made by <a href="https://github.com/Revellison">Revellison</a>. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

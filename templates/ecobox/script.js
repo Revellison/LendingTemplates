@@ -1,18 +1,15 @@
-// Глобальные переменные для калькулятора
+
 let bottlesCount = 0;
 let bagsCount = 0;
 let transportValue = 0;
 
-// Ждем загрузки DOM перед выполнением скрипта
 document.addEventListener('DOMContentLoaded', function() {
     console.log('EcoBox scripts loaded');
     
-    // Таймер обратного отсчета (если на странице есть элемент #timer)
     if (document.getElementById('timer')) {
         startTimer();
     }
     
-    // Наблюдатель за прокруткой для навигации
     window.addEventListener('scroll', function() {
         const nav = document.querySelector('.sticky');
         
@@ -25,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Плавная прокрутка для якорных ссылок
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -43,9 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Таймер обратного отсчета
 function startTimer() {
-    let time = 1800; // 30 минут
+    let time = 1800; 
     const timer = setInterval(() => {
         const minutes = Math.floor(time / 60);
         const seconds = time % 60;
@@ -55,58 +50,44 @@ function startTimer() {
     }, 1000);
 }
 
-// Функция перехода к следующему шагу калькулятора
 function nextStep(currentStep) {
-    // Скрываем текущий шаг
     const currentStepEl = document.getElementById('step' + currentStep);
     currentStepEl.classList.remove('active');
     
-    // Сохраняем введенные данные
     if (currentStep === 1) {
         bottlesCount = parseInt(document.getElementById('bottles').value) || 0;
     } else if (currentStep === 2) {
         bagsCount = parseInt(document.getElementById('bags').value) || 0;
     }
     
-    // Показываем следующий шаг
     const nextStepEl = document.getElementById('step' + (currentStep + 1));
     nextStepEl.classList.add('active');
 }
 
-// Функция возврата к предыдущему шагу
 function prevStep(currentStep) {
-    // Скрываем текущий шаг
     const currentStepEl = document.getElementById('step' + currentStep);
     currentStepEl.classList.remove('active');
     
-    // Показываем предыдущий шаг
     const prevStepEl = document.getElementById('step' + (currentStep - 1));
     prevStepEl.classList.add('active');
 }
 
-// Функция расчета результатов калькулятора
 function calculateResults() {
-    // Получаем значение транспорта
     transportValue = parseInt(document.getElementById('transport').value) || 0;
     
-    // Скрываем текущий шаг
     document.getElementById('step3').classList.remove('active');
     
-    // Расчет "экологического следа" (упрощенная формула для демонстрации)
     let ecoScore = 100 - (bottlesCount * 5) - (bagsCount * 3) + (transportValue * 10);
-    
-    // Ограничиваем значение от 0 до 100
+
     ecoScore = Math.max(0, Math.min(100, ecoScore));
-    
-    // Отображаем результат с анимацией
+
     const resultEl = document.getElementById('results');
     resultEl.classList.add('active');
     
     const scoreEl = document.querySelector('.result-score');
     let currentScore = 0;
     const targetScore = ecoScore;
-    
-    // Анимируем счетчик
+
     const countInterval = setInterval(() => {
         currentScore++;
         scoreEl.textContent = currentScore;
@@ -115,10 +96,9 @@ function calculateResults() {
             clearInterval(countInterval);
         }
     }, 20);
-    
-    // Текст рекомендации в зависимости от результата
+
     const recommendationText = document.querySelector('.result-box p');
-    const improvementPercent = Math.round(30 + Math.random() * 20); // Случайное значение между 30% и 50%
+    const improvementPercent = Math.round(30 + Math.random() * 20);
     
     if (ecoScore < 40) {
         recommendationText.innerHTML = `Ваш след значительно выше среднего. Подписка на EcoBox поможет снизить его на <span class="highlight">${improvementPercent}%</span>`;
