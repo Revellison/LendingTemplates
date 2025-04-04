@@ -1,0 +1,588 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --green: #2ecc71;
+    --earth: #786452;
+    --sky: #3498db;
+    --light-bg: #f8fff9;
+    --dark-green: #27ae60;
+    --light-grey: #f5f5f5;
+    --mid-grey: #e0e0e0;
+    --dark-grey: #555;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Rubik', 'Arial Rounded MT', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.6;
+    color: #333;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--earth);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.sticky {
+    text-align: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--green);
+}
+
+#demo {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    user-select: none;
+    color: var(--green);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(45deg, var(--light-bg), #e6f5e6);
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.hero-content {
+    z-index: 1;
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--earth);
+    margin-bottom: 30px;
+    animation: fadeInUp 1s;
+    line-height: 1.2;
+}
+
+.hero-text {
+    color: var(--dark-grey);
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1.2s;
+}
+
+.cta-button {
+    background: var(--green);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 7px 20px rgba(46, 204, 113, 0.4);
+}
+
+.about {
+    padding: 100px 5%;
+    background-color: white;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about h2 {
+    color: var(--earth);
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.feature {
+    padding: 30px;
+    border-radius: 15px;
+    background: var(--light-grey);
+    transition: transform 0.3s, box-shadow 0.3s;
+    user-select: none;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    color: var(--green);
+    margin-bottom: 15px;
+}
+
+.plans {
+    padding: 100px 5%;
+    background-color: white;
+    text-align: center;
+}
+
+.plans-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plan-card {
+    border: 2px solid var(--green);
+    border-radius: 15px;
+    padding: 35px 25px;
+    transition: all 0.3s ease;
+    text-align: center;
+    background: white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.plan-card.featured {
+    border-color: var(--dark-green);
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--green);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.plan-card.featured .plan-badge {
+    background: var(--dark-green);
+}
+
+.plan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(46, 204, 113, 0.15);
+}
+
+.plan-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.plan-card h3 {
+    color: var(--green);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.plan-features {
+    list-style: none;
+    margin: 25px 0;
+    text-align: left;
+}
+
+.plan-features li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.plan-features li:before {
+    content: "✓";
+    color: var(--green);
+    position: absolute;
+    left: 0;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--earth);
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.plan-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: white;
+    color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.plan-button:hover {
+    background: var(--green);
+    color: white;
+    transform: translateY(-3px);
+}
+
+.calculator {
+    background: var(--light-grey);
+    padding: 100px 5%;
+    text-align: center;
+}
+
+.calculator h2 {
+    color: var(--earth);
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.calculator-intro {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: var(--dark-grey);
+}
+
+.calculator-steps {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calculator-step {
+    display: none;
+    animation: fadeIn 0.5s;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.calculator-step.active {
+    display: block;
+}
+
+.calculator-step p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: var(--earth);
+}
+
+.calculator-step input, .calculator-step select {
+    padding: 12px 20px;
+    border: 2px solid var(--mid-grey);
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 30px;
+    transition: border-color 0.3s;
+}
+
+.calculator-step input:focus, .calculator-step select:focus {
+    border-color: var(--green);
+    outline: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.calculator-step button {
+    background: var(--green);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.calculator-step button.secondary-button {
+    background: white;
+    color: var(--green);
+    border: 2px solid var(--green);
+}
+
+.calculator-step button:hover {
+    background: var(--dark-green);
+    transform: translateY(-3px);
+}
+
+.calculator-step button.secondary-button:hover {
+    background: #f5f5f5;
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}
+
+.result-box {
+    background: var(--light-bg);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.result-score {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--earth);
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* Подвал */
+.footer {
+    background: var(--earth);
+    color: white;
+    padding: 80px 5% 30px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.footer-col h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--light-bg);
+}
+
+.footer-col p {
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-col a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.footer-col a:hover {
+    color: var(--green);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatBox {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-box {
+    animation: floatBox 3s infinite;
+    position: absolute;
+    right: 10%;
+    max-width: 400px;
+    z-index: 0;
+}
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    
+    .floating-box {
+        max-width: 350px;
+    }
+    
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 5% 50px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content {
+        margin-bottom: 60px;
+    }
+    
+    .floating-box {
+        position: relative;
+        right: auto;
+        max-width: 250px;
+        margin-top: 30px;
+    }
+    
+    .about, .plans, .calculator {
+        padding: 70px 5%;
+    }
+    
+    .plan-card.featured {
+        transform: scale(1);
+    }
+    
+    .plan-card.featured:hover {
+        transform: translateY(-10px);
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 1rem;
+    }
+    
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 0.9rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .nav-links {
+        gap: 15px;
+        font-size: 0.9rem;
+    }
+    
+    .plan-card {
+        padding: 25px 15px;
+    }
+    
+    .calculator-step {
+        padding: 25px 15px;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .feature {
+        padding: 20px 15px;
+    }
+}

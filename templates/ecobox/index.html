@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/png" href="src/media/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoBox - Экологичная подписка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="sticky">
+        <div class="nav-container">
+            <p id="demo">Демо-версия</p>
+            <div class="nav-links">
+                <a href="#about">О нас</a>
+                <a href="#plans">Наборы</a>
+                <a href="#calculator">Калькулятор</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Спаси планету — начни с маленькой коробки</h1>
+            <p class="hero-text">Ежемесячная подписка на экологичные товары для повседневной жизни. Сокращайте свой экослед, делая простые шаги с нами.</p>
+            <a href="#plans" class="cta-button">Выбрать набор</a>
+        </div>
+        <img src="src/media/logo.png" alt="EcoBox" class="floating-box">
+    </section>
+
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>Что такое EcoBox?</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🌱</div>
+                    <h3>Экологично</h3>
+                    <p>Все товары биоразлагаемые и не наносят вред природе</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Регулярно</h3>
+                    <p>Новый набор каждый месяц без лишних хлопот</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💚</div>
+                    <h3>Полезно</h3>
+                    <p>Помогаем вам сделать жизнь экологичнее и осознаннее</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="plans" class="plans">
+        <h2 class="section-title">Выберите свой набор</h2>
+        <div class="plans-container">
+            <div class="plan-card">
+                <div class="plan-badge">Популярное</div>
+                <h3>Mini Box</h3>
+                <p>5 биоразлагаемых товаров</p>
+                <ul class="plan-features">
+                    <li>Зубная щетка из бамбука</li>
+                    <li>Многоразовые мешочки</li>
+                    <li>Экологичные салфетки</li>
+                </ul>
+                <p class="price">₽990/мес</p>
+                <a href="#" class="plan-button">Выбрать</a>
+            </div>
+
+            <div class="plan-card featured">
+                <div class="plan-badge">Выгодно</div>
+                <h3>Standard Box</h3>
+                <p>8 биоразлагаемых товаров</p>
+                <ul class="plan-features">
+                    <li>Все из Mini Box</li>
+                    <li>Косметика без пластика</li>
+                    <li>Тканевые сумки</li>
+                </ul>
+                <p class="price">₽1490/мес</p>
+                <a href="#" class="plan-button">Выбрать</a>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-badge">Максимум</div>
+                <h3>Maxi Box</h3>
+                <p>12 биоразлагаемых товаров</p>
+                <ul class="plan-features">
+                    <li>Все из Standard Box</li>
+                    <li>Экологичные чистящие средства</li>
+                    <li>Многоразовые контейнеры</li>
+                </ul>
+                <p class="price">₽2490/мес</p>
+                <a href="#" class="plan-button">Выбрать</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="calculator">
+        <h2>Калькулятор экоследа</h2>
+        <p class="calculator-intro">Узнайте, как ваши привычки влияют на окружающую среду</p>
+        
+        <div class="calculator-steps">
+            <div class="calculator-step active" id="step1">
+                <p>Сколько пластиковых бутылок вы используете в неделю?</p>
+                <input type="number" id="bottles" min="0" placeholder="Например: 3">
+                <button onclick="nextStep(1)">Далее</button>
+            </div>
+            
+            <div class="calculator-step" id="step2">
+                <p>Сколько одноразовых пакетов вы используете в неделю?</p>
+                <input type="number" id="bags" min="0" placeholder="Например: 5">
+                <div class="button-group">
+                    <button onclick="prevStep(2)" class="secondary-button">Назад</button>
+                    <button onclick="nextStep(2)">Далее</button>
+                </div>
+            </div>
+            
+            <div class="calculator-step" id="step3">
+                <p>Как часто вы используете общественный транспорт вместо личного автомобиля?</p>
+                <select id="transport">
+                    <option value="0">Никогда</option>
+                    <option value="1">Редко (1-2 раза в месяц)</option>
+                    <option value="2">Иногда (1-2 раза в неделю)</option>
+                    <option value="3">Часто (3-5 раз в неделю)</option>
+                    <option value="4">Всегда</option>
+                </select>
+                <div class="button-group">
+                    <button onclick="prevStep(3)" class="secondary-button">Назад</button>
+                    <button onclick="calculateResults()">Рассчитать</button>
+                </div>
+            </div>
+            
+            <div class="calculator-step" id="results">
+                <h3>Ваш экологический след:</h3>
+                <div class="result-box">
+                    <div class="result-score">78</div>
+                    <p>Ваш след выше среднего. Подписка на EcoBox поможет снизить его на <span class="highlight">34%</span></p>
+                </div>
+                <a href="#plans" class="cta-button">Выбрать набор EcoBox</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h3>EcoBox</h3>
+                <p>Меняем мир к лучшему вместе с вами.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Контакты - demo</h4>
+                <p>info@ecobox.ru</p>
+                <p>+7 (800) 123-45-67</p>
+            </div>
+            <div class="footer-col">
+                <h4>Ссылки</h4>
+                <a href="#">О нас</a>
+                <a href="#">Доставка</a>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 Made by <a href="https://github.com/Revellison">Revellison</a>. Все права защищены.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
