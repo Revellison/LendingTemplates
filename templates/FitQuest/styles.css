@@ -1267,6 +1267,23 @@ section {
     z-index: 1;
 }
 
+.download-button {
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(124, 77, 255, 0.1);
+    color: #000000;
+    border: none;
+    transition: transform 0.3s;
+    cursor: pointer;
+    font-family: rubik, sans-serif;
+    font-size: 1rem;
+}
+
+.download-button:hover {
+    transform: translateY(-5px);
+}
+
+
 .download p {
     max-width: 600px;
     margin: 0 auto 40px;
