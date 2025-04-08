@@ -10,14 +10,19 @@
 
 <header>
     <div class="logoandwatermark">
-        <img src="src/images/logo.png" alt="Vixor">
-        <div class="watermark">- made by <a href="https://github.com/Revellison">Revellison</a></div>
+        <p class="logo">Vixor</p>
     </div>    
     <nav>
-        <a href="#price">Цены</a>
-        <a href="#contacts">Контакты</a>
-        <a href="#aboutme">Обо мне</a>
-        <a href="#portfolio">Портфолио</a>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links">
+            <a href="#portfolio">Портфолио</a>
+            <a href="#price">Цены</a>
+            <a href="#contacts">Контакты</a>
+        </div>
     </nav>
 </header>
 
@@ -25,18 +30,42 @@
     <div class="hero-content">
         
         <div class="hero-left">
-            <img src="src/images/profile.png" alt="Профиль">
-            <p>Делаю ролики, которые делают прибыль.</p>
-            <button class="buy_button">Заказать ролик</button>
-            <img src="src/images/tags.png" alt="">
+            <img class ="profile" src="src/images/profile.png" alt="Профиль">
+            <p class="hero-text">Делаю <a style="color: #2D4BA6;">ролики</a>, которые делают <a style="color: #2D4BA6;">прибыль</a>.</p>
+            <button class="buy-button">Заказать ролик</button>
+            <img class="tags" src="src/images/tags.svg" alt="Теги">
         </div>
         
         <div class="hero-right">
-            <img src="src/images/video.gif" alt="gif">
+            <img class="gif" src="src/images/video.gif" alt="gif">
         </div>
     
     </div>
 </section>
+
+<div class="price">
+    <div class="price-content">
+        <div class="price-standard">
+            <img class="price-standard-image" src="src/images/standard.svg" alt="Стандарт">
+            <div class="price-standard-text">
+                <button class="price-standard-button">Выбрать</button>
+            </div>
+        </div>
+        <div class="price-business">
+            <img class="price-business-image" src="src/images/business.svg" alt="Бизнес">
+            <div class="price-business-text">
+                <button class="price-business-button">Выбрать</button>
+            </div>
+        </div>
+        <div class="price-premium">
+            <img class="price-premium-image" src="src/images/premium.svg" alt="Премиум">
+            <div class="price-premium-text">
+                <button class="price-premium-button">Выбрать</button>
+            </div>
+        </div>
+        
+    </div>
+</div>
 <footer>
     <p>© 2025 Made by <a href="https://github.com/Revellison">Revellison</a>. Все права защищены.</p>
 </footer>
