@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+    background-color: black;
+    border-radius: 15px;
+    color: white;
+    width: calc(100% - 10px); 
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: border-radius 0.3s ease, margin 0.3s ease, width 0.3s ease;
+    box-sizing: border-box;
+}
+
+header.sticky {
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+header img {
+    margin-left: 10px;
+    margin: 5px;
+}
+
+.watermark {
+    font-size: 1.5rem;
+}
+
+.watermark a{
+    transition: color 0.3s;
+    color: #2D4BA6;
+}
+
+.watermark a:hover {
+    color: aliceblue;
+}
+
+.logoandwatermark {
+    display: flex;
+    align-items: center;
+    user-select: none;
+}
+
+nav {
+    margin: 5px;
+    margin-right: 1.5rem;
+    user-select: none;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: padding-right 0.3s;
+    position: relative;
+}
+
+nav a:hover {
+    padding-right: +20px;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2D4BA6;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
